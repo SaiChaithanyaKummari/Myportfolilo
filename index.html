@@ -5,89 +5,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio website</title>
-    <link rel="font-awesome" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <header class="header">
-        <nav class="nav">
+        <nav class="navbar">
+            <h3 class="name">Kummari Sai Chaithanya</h3>
             <a href="#index">Home</a>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
             <a href="#Experience">Experience</a>
+            <a href="#Contact">Contact</a>
         </nav>
     </header>
 
     <div class="container">
         <section id="about">
-            <img src="IMG_20250711_133110.png" alt="profile picture" class="profile-pic"
-                style="width: 200px; height: 200px; border-radius: 50%;">
-            <h2>Kummari Sai Chaithanya</h2>
-            <P>Aspiring Full Stack Developer and AI Engineer, currently pursuing B.Tech in Computer Science and
-                Engineering
-                (AIML) <br> Passionate about building web applications and intelligent solutions to real-world problems.
-            </P>
-            <a href="https://github.com/SaiChaithanyaKummari" target="_blank"></a><i
-                class="fa-brands fa-square-github"></i>
-            GitHub profile</a>
-            <a href="https://www.linkedin.com/in/saichaithanyakummari" target="_blank"></a><i
-                class="fa-brands fa-square-linkedin"></i> LinkedIn profile</a>
-        </section>
-        <section id="projects">
-            <div>
-                <h1>Projects</h1>
-                <div class="project">
-                    <h3>Improving Shopping Mall Revenue by Real Time Customized Digital Coupon Issuance</h3>
-                    <P>Developed a real-time AI-powered system to boost mall revenue by predicting customer churn and
-                        <br>
-                        issuing
-                        personalized digital coupons using TensorFlow, Pandas, Scikit-learn, Matplotlib/Seaborn, and
-                        Django/MySQL.
-                    </P>
+            <div class="image">
+                <img src="IMG_20250711_133110.png" alt="profile picture" class="profile-pic">
+            </div>
+            <div class="information">
+                <h1>Hi, I'm Kummari Sai Chaithanya</h1>
+                <P>I love creating beautiful and functional websites. <br>Passionate about web development and always
+                    eager to learn new technologies and build new projects.
+                </P>
+                <div class="links">
+                    <a href="https://github.com/SaiChaithanyaKummari" target="_blank" title="Github"><i
+                            class="fa-brands fa-square-github"></i></a>
+                    <a href="https://www.linkedin.com/in/saichaithanyakummari" target="_blank" title="Linkedin"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="whatsapp://send?phone=+917036993492" target="_blank" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/mr_chaitu2434/" target="_blank" title="Instagram">
+                        <i class="fab fa-instagram"></i></a>
                 </div>
-                <div class="project">
-                    <h3>Healthmate</h3>
-                    <p>Personalized Wellness Guide Engineered ML system to predict nutrient deficiencies using SVM and
-                        <br>
-                        XGBoost,Flask for backend, NumPy/Pandas for data processing, and Scikit-learn.
-                    </p>
-                </div>
-                <div class="project">
-                    <h3>Analysis and prediction of workplace accidents using machine learning</h3>
-                    <p>Developed a machine learning model to analyze and predict workplace accidents using occupational
-                        data, <br>
-                        implementing classification algorithms in Python with libraries like Scikit-learn and Pandas.
-                    </p>
+                <div class="buttons">
+                    <a href="#contact" class="contact-button">Contact Me</a>
+                    <a href="Kummari Sai Chaithanya.pdf" download class="download-resume-button">Download Resume</a>
                 </div>
             </div>
         </section>
-        <section id="skills">
+        <section id="projects">
+            <h1>Projects</h1>
+            <div class="project">
+                <h3>Improving Shopping Mall Revenue by Real Time Customized Digital Coupon Issuance:</h3>
+                <P>* Built a real-time AI-powered customer churn prediction system using TensorFlow and Scikit-learn to
+                    identify at-risk customers and improve retention strategies.
+
+                    * Designed and implemented personalized digital coupon recommendations by analyzing customer
+                    behavior data with Pandas and visualizing insights using Matplotlib and Seaborn.
+                    <br>
+                    * Developed and deployed a full-stack web application using Django and MySQL to automate coupon
+                    issuance and enhance mall revenue growth.
+                </P>
+            </div>
+            <div class="project">
+                <h3>Healthmate:</h3>
+                <p>* Developed a Personalized Wellness Guide by engineering a Machine Learning system to predict
+                    nutrient deficiencies using SVM and XGBoost algorithms.
+                    <br>
+                    * Processed and analyzed health datasets using NumPy and Pandas to perform feature engineering, data
+                    cleaning, and model optimization.
+                    <br>
+                    * Built and deployed a Flask-based backend API integrating Scikit-learn models to deliver real-time
+                    nutritional recommendations.
+                </p>
+            </div>
+            <div class="project">
+                <h3>Analysis and prediction of workplace accidents using machine learning:</h3>
+                <p>* Developed a machine learning model to analyze and predict workplace accidents using occupational
+                    safety datasets to improve risk assessment and prevention strategies.
+                    <br>
+                    * Implemented classification algorithms in Python using Scikit-learn to identify high-risk patterns
+                    and enhance prediction accuracy.
+                    <br>
+                    * Performed data preprocessing and feature engineering using Pandas to clean, transform, and analyze
+                    large-scale workplace data efficiently.
+                </p>
+            </div>
+        </section>
+        <section id="Technical-skills">
             <h1>Skills</h1>
-            <span id="skill">Python</span>
-            <span id="skill">Java</span>
-            <span id="skill">MySQL</span>
-            <span id="skill">HTML</span>
-            <span id="skill">CSS</span>
-            <span id="skill">Basic Javascript</span>
+            <div class="programming-Languages">
+                <h3>Programming Languages:</h3>
+                <div class="sub-skills">
+                    <div class="python">
+                        <a href="#python" target="_blank"><i class="fa-brands fa-python"></i>Python</a>
+                    </div>
+                    <div class="java">
+                        <a href="#java" target="_blank"><i class="fa-brands fa-java"></i>Java</a>
+                    </div>
+                    <div class="sql">
+                        <a href="#sql" target="_blank"><i class="fa-solid fa-database"></i>MYSQL</a>
+                    </div>
+                </div>
+            </div>
+            <div class="web-technologies">
+                <h3>Web Technologies:</h3>
+                <div class="sub-skills">
+                    <div class="html">
+                        <a href="#html" target="_blank"><i class="fa-brands fa-html5"></i>HTML</a>
+                    </div>
+                    <div class="css">
+                        <a href="#css" target="_blank"><i class="fa-brands fa-css3-alt"></i>CSS</a>
+                    </div>
+                    <div class="javascript">
+                        <a href="#javascript" target="_blank"><i class="fa-brands fa-js"></i>JavaScript</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tools">
+                <h3>Tools:</h3>
+                <div class="sub-skills">
+                    <div class="vs-code">
+                        <a href="#vs-code" target="_blank"><i class="fa-solid fa-code"></i>VS Code</a>
+                    </div>
+                    <div class="github">
+                        <a href="#github" target="_blank"><i class="fa-brands fa-github"></i>Github</a>
+                    </div>
+                    <div class="lovable">
+                        <a href="#lovable" target="_blank">
+                            <i class="fa-solid fa-heart"></i>Lovable
+                        </a>
+                    </div>
+                    <div class="cursor">
+                        <a href="#cursor" target="_blank"></i>Cursor</a>
+                    </div>
+                    <div class="antigravity">
+                        <a href="#antigravity" target="_blank"></i>Antigravity</a>
+                    </div>
+                </div>
+            </div>
+
         </section>
         <section id="Experience">
             <h1>Experience</h1>
             <div class="experience">
                 <h3>Internship at Cognifyz</h3>
-                <p>Gained hands-on experience in frontend development by working on real-world projects and enhancing
-                    technical skills.</p>
+                <p>Front-End Development Intern</p>
+                <p>Cognifyz Technologies | Nov 2025 – Dec 2025</p>
+                <p>Worked on developing responsive and user-friendly web interfaces, collaborating with backend teams
+                    for API integration, and improving performance and cross-browser compatibility. Gained hands-on
+                    experience in front-end development, debugging, and real-world project implementation.</p>
             </div>
         </section>
-        <h1>Contact</h1>
-        <div class="contact">
-            <p>Email: <a href="mailto:sai.chaithanya.kummari@gmail.com">sai.chaithanya.kummari@gmail.com</a></p>
-            <p>Phone: +91 7036993492</p>
-        </div>
+        <section id="Contact">
+            <h1>Contact Me</h1>
+            <div id="contact-info">
+                <div class="contact-info">
+                    <i class="fa-solid fa-envelope-circle-check"></i>
+                    <div class="mail">
+                        <h3>Email</h3>
+                        <p>saichaithanyakummari@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <i class="fa-notdog-duo fa-solid fa-phone"></i>
+                    <div class="phone">
+                        <h3>Phone</h3>
+                        <p>+91 7036993492</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         <footer>
-            <p>&copy; Kummari Sai Chaithanya 2026</p>
+            <p>&copy; Kummari Sai Chaithanya - 2026</p>
         </footer>
     </div>
 </body>

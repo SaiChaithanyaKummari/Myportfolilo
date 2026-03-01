@@ -8,12 +8,15 @@
     background-color: wheat;
 }
 
+.header {
+    position: sticky;
+    top: 0;
+}
 .navbar {
     padding: 20px;
     display: flex;
     justify-content:flex-end;
     background-color: black;
-
 }
 
 .navbar a {

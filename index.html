@@ -52,7 +52,8 @@
                 </div>
                 <div class="buttons">
                     <a href="#contact" class="contact-button">Contact Me</a>
-                    <button onclick="downloadResume()" class="download-resume-button">Download Resume</button>
+                    <a href="Kummari Sai Chaithanya.pdf" download="Kummari_Sai_Chaithanya_Resume.pdf"
+                        class="download-resume-button">Download Resume</a>
                 </div>
             </div>
         </section>
@@ -185,16 +186,6 @@
     </div>
 
     <script>
-        // Download Resume Function
-        function downloadResume() {
-            const link = document.createElement('a');
-            link.href = 'Kummari_Sai_Chaithanya.pdf';
-            link.download = 'Kummari_Sai_Chaithanya_Resume.pdf';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-
         // Menu Toggle Functionality
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');

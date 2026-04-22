@@ -14,12 +14,19 @@
     <header class="header">
         <nav class="navbar">
             <h3 class="name">Kummari Sai Chaithanya</h3>
-            <a href="#index">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#Technical-skills">Skills</a>
-            <a href="#Experience">Experience</a>
-            <a href="#Contact">Contact</a>
+            <div class="nav-links" id="navLinks">
+                <a href="#index">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#Technical-skills">Skills</a>
+                <a href="#Experience">Experience</a>
+                <a href="#Contact">Contact</a>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
@@ -176,6 +183,26 @@
             <p>&copy; Kummari Sai Chaithanya - 2026</p>
         </footer>
     </div>
+
+    <script>
+        // Menu Toggle Functionality
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', function () {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        const navItems = navLinks.querySelectorAll('a');
+        navItems.forEach(item => {
+            item.addEventListener('click', function () {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 
 </html>

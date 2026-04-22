@@ -4,19 +4,39 @@
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
+html {
+    width: 100%;
+    background-color: wheat;
+}
+
+body {
+    width: 100%;
+    background-color: wheat;
+    overflow-x: hidden;
+}
+
 .container {
     background-color: wheat;
+    width: 100%;
 }
 
 .header {
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 .navbar {
     padding: 20px;
     display: flex;
     justify-content:flex-end;
     background-color: black;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 0;
 }
 
 .navbar a {
@@ -25,12 +45,40 @@
     color: white;
     margin-left: 20px;
     margin-right: 20px;
-    
 }
 
 .navbar h3 {
     color: white;
     margin-right: auto;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 6px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
 }
 
 .image {
@@ -284,4 +332,493 @@ footer{
     color: white;
     justify-content: center;
     align-items: center;
+}
+
+/* ===== RESPONSIVE MEDIA QUERIES ===== */
+
+/* Large Screens (1200px and above) */
+@media (min-width: 1200px) {
+    .navbar a {
+        font-size: 18px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .information h1 {
+        font-size: 45px;
+    }
+}
+
+/* Tablets and Medium Screens (768px to 1024px) */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 15px;
+        flex-wrap: wrap;
+    }
+    
+    .navbar a {
+        font-size: 16px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    
+    .navbar h3 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    #about {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .image {
+        width: 100%;
+        height: auto;
+    }
+    
+    .profile-pic {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .information {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        padding: 20px;
+    }
+    
+    .information h1 {
+        font-size: 32px;
+        margin-top: 20px;
+    }
+    
+    .information p {
+        font-size: 18px;
+    }
+    
+    .project {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+    
+    .project h3 {
+        font-size: 20px;
+    }
+    
+    .project p {
+        font-size: 16px;
+    }
+    
+    #projects h1 {
+        font-size: 32px;
+    }
+    
+    #Technical-skills h1 {
+        font-size: 32px;
+    }
+    
+    .programming-Languages, .web-technologies, .tools {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+    
+    .sub-skills {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+    
+    .python, .java, .sql, .html, .css, .javascript,
+    .vs-code, .github, .lovable, .cursor, .antigravity {
+        width: 150px;
+        height: 60px;
+        padding: 8px;
+    }
+    
+    .python a, .java a, .sql a, .html a, .css a, .javascript a,
+    .vs-code a, .github a, .lovable a, .cursor a, .antigravity a {
+        font-size: 16px;
+    }
+    
+    .experience {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+    
+    .experience h3 {
+        font-size: 20px;
+    }
+    
+    .experience p {
+        font-size: 16px;
+    }
+    
+    #Experience h1 {
+        font-size: 32px;
+    }
+    
+    #Contact h1 {
+        font-size: 32px;
+    }
+    
+    .contact-button, .download-resume-button {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+    
+    .links a {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+    }
+    
+    footer {
+        font-size: 16px;
+    }
+}
+
+/* Mobile Phones (480px to 767px) */
+@media (max-width: 767px) {
+    .navbar {
+        padding: 12px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background-color: #1a1a1a;
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 0;
+        display: none;
+        transition: 0.3s ease;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .navbar h3 {
+        font-size: 16px;
+        margin-right: 0;
+        margin-bottom: 0;
+        width: auto;
+        text-align: center;
+    }
+    
+    .navbar a {
+        font-size: 13px;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 12px 20px;
+        display: block;
+        border-bottom: 1px solid #333;
+    }
+    
+    #about {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+    
+    .image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+        border: 3px solid #000000;
+    }
+    
+    .information {
+        width: 100%;
+        height: auto;
+        gap: 15px;
+        padding: 15px;
+        margin-top: 10px;
+    }
+    
+    .information h1 {
+        font-size: 24px;
+        margin-top: 10px;
+    }
+    
+    .information p {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+    
+    .links {
+        gap: 15px;
+        margin-top: 5px;
+    }
+    
+    .links a {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+    
+    .buttons {
+        margin-top: 15px;
+        gap: 10px;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .contact-button, .download-resume-button {
+        padding: 10px 20px;
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    #projects {
+        padding: 10px;
+    }
+    
+    #projects h1 {
+        font-size: 24px;
+        margin-top: 5px;
+    }
+    
+    .project {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        padding: 12px;
+    }
+    
+    .project h3 {
+        font-size: 16px;
+    }
+    
+    .project p {
+        font-size: 13px;
+        margin-top: 8px;
+    }
+    
+    #Technical-skills {
+        padding: 10px;
+        margin-top: 30px;
+    }
+    
+    #Technical-skills h1 {
+        font-size: 24px;
+    }
+    
+    .programming-Languages, .web-technologies, .tools {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        padding: 12px;
+    }
+    
+    .programming-Languages h3, .web-technologies h3, .tools h3 {
+        font-size: 18px;
+    }
+    
+    .sub-skills {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 15px;
+        justify-content: center;
+    }
+    
+    .python, .java, .sql, .html, .css, .javascript,
+    .vs-code, .github, .lovable, .cursor, .antigravity {
+        width: 120px;
+        height: 55px;
+        padding: 6px;
+    }
+    
+    .python a, .java a, .sql a, .html a, .css a, .javascript a,
+    .vs-code a, .github a, .lovable a, .cursor a, .antigravity a {
+        font-size: 13px;
+    }
+    
+    #Experience {
+        padding: 10px;
+    }
+    
+    #Experience h1 {
+        font-size: 24px;
+        margin-top: 15px;
+    }
+    
+    .experience {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        padding: 12px;
+    }
+    
+    .experience h3 {
+        font-size: 16px;
+    }
+    
+    .experience p {
+        font-size: 13px;
+        margin-top: 8px;
+    }
+    
+    #Contact {
+        padding: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    #Contact h1 {
+        font-size: 24px;
+        margin-top: 10px;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    #contact-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    footer {
+        font-size: 13px;
+        height: 50px;
+    }
+}
+
+/* Small Phones (below 480px) */
+@media (max-width: 479px) {
+    .navbar {
+        padding: 8px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .menu-toggle span {
+        width: 20px;
+        height: 2px;
+    }
+    
+    .nav-links {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background-color: #1a1a1a;
+        flex-direction: column;
+        padding: 15px 0;
+        gap: 0;
+        display: none;
+        transition: 0.3s ease;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .navbar h3 {
+        font-size: 14px;
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+    
+    .navbar a {
+        font-size: 11px;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 10px 15px;
+        display: block;
+        border-bottom: 1px solid #333;
+    }
+    
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+        border: 2px solid #000000;
+        margin: 10px;
+    }
+    
+    .information h1 {
+        font-size: 20px;
+        margin-top: 5px;
+    }
+    
+    .information p {
+        font-size: 13px;
+        line-height: 1.3;
+    }
+    
+    .links {
+        gap: 12px;
+        margin-top: 3px;
+    }
+    
+    .links a {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    
+    .contact-button, .download-resume-button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+    
+    #projects h1, #Technical-skills h1, #Experience h1, #Contact h1 {
+        font-size: 20px;
+    }
+    
+    .project h3, .programming-Languages h3, .experience h3 {
+        font-size: 14px;
+    }
+    
+    .project p, .experience p {
+        font-size: 12px;
+        margin-top: 5px;
+    }
+    
+    .python, .java, .sql, .html, .css, .javascript,
+    .vs-code, .github, .lovable, .cursor, .antigravity {
+        width: 100px;
+        height: 50px;
+        padding: 4px;
+    }
+    
+    .python a, .java a, .sql a, .html a, .css a, .javascript a,
+    .vs-code a, .github a, .lovable a, .cursor a, .antigravity a {
+        font-size: 11px;
+    }
+    
+    footer {
+        font-size: 11px;
+        height: 45px;
+    }
 }

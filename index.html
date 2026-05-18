@@ -9,6 +9,7 @@
     <title>Kummari Sai Chaithanya | Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -433,7 +434,7 @@
                 };
 
                 // Send email using EmailJS
-                emailjs.send('service_gomu3ob', 'template_e27w0gu', emailParams)
+                emailjs.send('service_gomu3ob', 'template_njfsjjj', emailParams)
                     .then(function (response) {
                         console.log('SUCCESS!', response.status, response.text);
                         showMessage('Message sent successfully! I\'ll get back to you soon.', 'success');

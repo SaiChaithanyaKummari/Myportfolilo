@@ -76,8 +76,8 @@ a {
 
 /*Scroll Reveal*/
 .reveal {
-    opacity: 0;
-    transform: translateY(40px);
+    opacity: 1;
+    transform: translateY(0);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
@@ -969,6 +969,43 @@ a {
 .send-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 30px var(--shadow-glow);
+}
+
+.send-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.form-message {
+    padding: 12px 16px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    animation: slideIn 0.3s ease;
+    min-height: 20px;
+}
+
+.form-message.success {
+    background: rgba(34, 197, 94, 0.15);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.form-message.error {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /*Footer*/
